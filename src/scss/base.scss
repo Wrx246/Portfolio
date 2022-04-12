@@ -1,8 +1,56 @@
 @import '~normalize.css';
 
 $bcgcolor: rgb(180, 177, 177);
+$fontcolor: rgb(30, 37, 50);
 
 header {
-    min-height: 150px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 95vw;
+}
+
+.nav__body {
+    display: flex;
+    justify-content: start;
+    li {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+}
+
+.nav__link {
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(30, 37, 50);
+    &:hover {
+        color: #2f87f1;
+        transition: .2s;
+    }
+    &:active {
+        color: #b3d4fc;
+        transition: .2s;
+    }
+}
+
+.nav__ico {
+    font-family: 'Comic Sans MS';
+    font-size: 25px;
+    a {
+        text-decoration: none;
+        color: $fontcolor;
+        cursor: pointer;
+    }
+}
+
+.main {
     background-color: $bcgcolor;
+    min-height: 90vh;
+    min-width: 100vw;
 }

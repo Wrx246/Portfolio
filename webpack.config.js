@@ -4,11 +4,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    // minimize: true,
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
+    },
+    devServer: {
+        port: 3500
     },
     plugins: [
         new HtmlWebpackPlugin({ template: './src/index.html' }),
