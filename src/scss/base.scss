@@ -1,0 +1,8 @@
+@import '~normalize.css';
+
+$bcgcolor: rgb(180, 177, 177);
+
+header {
+    min-height: 150px;
+    background-color: $bcgcolor;
+}
