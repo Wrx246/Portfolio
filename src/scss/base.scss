@@ -1,7 +1,16 @@
 @import '~normalize.css';
 
+* {
+    box-sizing: border-box;
+}
+
 $bcgcolor: rgb(180, 177, 177);
 $fontcolor: rgb(30, 37, 50);
+$linkcolor: #2f87f1;
+$titlefont: 'Comic Sans MS';
+
+
+// *** Start HEADER *** //
 
 header {
     min-height: 100px;
@@ -30,7 +39,7 @@ header {
     font-size: 25px;
     color: rgb(30, 37, 50);
     &:hover {
-        color: #2f87f1;
+        color: $linkcolor;
         transition: .2s;
     }
     &:active {
@@ -40,7 +49,7 @@ header {
 }
 
 .nav__ico {
-    font-family: 'Comic Sans MS';
+    font-family: $titlefont;
     font-size: 25px;
     a {
         text-decoration: none;
@@ -52,5 +61,127 @@ header {
 .main {
     background-color: $bcgcolor;
     min-height: 90vh;
-    min-width: 100vw;
+    min-width: 90vw;
+}
+
+// *** Start ABOUT SECTION *** //
+
+.about {
+    min-height: 40vh;
+    padding: 20px 30px 0px 30px;
+    h1 {
+        font-family: 'Comic Sans MS';
+        font-weight: lighter;
+        text-align: center;
+        margin: 0 auto;
+    }
+    h3 {
+        font-weight: normal;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 45px;
+    }
+    p {
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 25px;
+        line-height: 40px;
+        a {
+            text-decoration: none;
+            color: $linkcolor;
+            &:hover {
+                color: #b3d4fc;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+// *** Start SKILLS SECTION *** //
+
+.skills {
+    padding: 0px 30px 0px 30px;
+    h2 {
+        margin: 0 auto;
+        font-family: $titlefont;
+        text-align: center;
+    }
+}
+
+.skills__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding-top: 40px;
+    max-width: 70%;
+    .skill__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        max-width: 150px;
+        max-height: 90px;
+        min-width: 80px;
+        min-height: 50px;
+        background-color: $linkcolor;
+        span {
+            color: white;
+            font-size: 25px;
+            font-family: $titlefont;
+        }
+    }
+}
+
+// *** Start MY PROJECTS SECTION *** //
+
+.projects {
+    padding: 100px 30px 0px 30px;
+    h2 {
+        margin: 0 auto;
+        font-family: $titlefont;
+        text-align: center;
+    }
+}
+
+.projects__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.projects__item{
+    background-color: #2f87f1;
+    // min-width: 360px;
+    // max-height: 600px;
+    margin: 0 auto;
+    background-color: rgb(233, 230, 230);
+    img {
+        padding: 10px;
+    }
+    h3 {
+        padding-top: 15px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.item__links {
+    margin: 0 auto;
+    max-width: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px 15px 0px;
+    a {
+        color: $fontcolor;
+        &:hover {
+            color: $linkcolor;
+        }
+        &:active {
+            color: #b3d4fc;
+        }
+    }
 }
