@@ -59,7 +59,7 @@ header {
 }
 
 .main {
-    background-color: $bcgcolor;
+    // background-color: $bcgcolor;
     min-height: 90vh;
     min-width: 90vw;
 }
@@ -121,11 +121,13 @@ header {
         align-items: center;
         justify-content: center;
         list-style-type: none;
-        max-width: 150px;
-        max-height: 90px;
+        max-width: 250px;
         min-width: 80px;
+        max-height: 90px;
         min-height: 50px;
         background-color: $linkcolor;
+        padding: 20px;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         span {
             color: white;
             font-size: 25px;
@@ -137,7 +139,7 @@ header {
 // *** Start MY PROJECTS SECTION *** //
 
 .projects {
-    padding: 100px 30px 0px 30px;
+    padding: 100px 30px 50px 30px;
     h2 {
         margin: 0 auto;
         font-family: $titlefont;
@@ -155,11 +157,11 @@ header {
 
 .projects__item{
     background-color: #2f87f1;
-    // min-width: 360px;
-    // max-height: 600px;
     margin: 0 auto;
     background-color: rgb(233, 230, 230);
     img {
+        max-width: 100%;
+        height: auto;
         padding: 10px;
     }
     h3 {
@@ -167,6 +169,11 @@ header {
         text-align: center;
         margin: 0 auto;
     }
+}
+
+.pic {
+    width: 335px;
+    height: 356px;
 }
 
 .item__links {
@@ -184,4 +191,29 @@ header {
             color: #b3d4fc;
         }
     }
+}
+
+// *** Start CONTACT SECTION *** //
+
+.contact {
+    padding: 30px 30px 30px 30px;
+    align-items: center;
+    h2 {
+        margin: 0 auto;
+        font-family: $titlefont;
+        text-align: center;
+    }
+}
+
+.contact__body {
+    max-width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.social {
+    width: 50px;
+    height: 50px;
 }
