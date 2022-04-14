@@ -7,7 +7,7 @@
 $bcgcolor: rgb(180, 177, 177);
 $fontcolor: rgb(30, 37, 50);
 $linkcolor: #2f87f1;
-$titlefont: 'Comic Sans MS';
+$titlefont: 'Gilroy';
 
 
 // *** Start HEADER *** //
@@ -128,7 +128,7 @@ header {
     padding: 20px 30px 0px 30px;
 
     h1 {
-        font-family: 'Comic Sans MS';
+        font-family: $titlefont;
         font-weight: lighter;
         text-align: center;
         margin: 0 auto;
