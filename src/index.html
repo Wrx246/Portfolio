@@ -11,6 +11,10 @@
 <body>
     <header class="header">
         <nav class="nav__wrapper">
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
             <ul class="nav__body">
                 <li><a href="#" class="nav__link">Home</a></li>
                 <li><a href="#about" class="nav__link">About me</a></li>
@@ -44,9 +48,10 @@
                 <li class="skill__item"><span>JavaScript</span></li>
                 <li class="skill__item"><span>HTML</span></li>
                 <li class="skill__item"><span>CSS</span></li>
+                <li class="skill__item"><span>SCSS/Sass</span></li>
                 <li class="skill__item"><span>Context API</span></li>
                 <li class="skill__item"><span>Axios</span></li>
-                <li class="skill__item"><span>Redux-saga</span></li>
+                <li class="skill__item"><span>Redux-thunk</span></li>
             </ul>
         </section>
         <section id="projects" class="projects">
@@ -80,16 +85,17 @@
         </section>
         <hr />
     </main>
-    <footer>
-        <div id="contact" class="contact">
-            <h2>Contact me</h2>
-            <div class="contact__body">
-                <a href="https://github.com/Wrx246"><img class="social" src="./assets/github.png" alt="github icon"></a>
-                <a href="https://www.linkedin.com/in/mkuzmianok/"><img class="social" src="./assets/linkedin.png" alt="linkedin icon"></a>
-                <a href="mailto:jst.wrx@gmail.com"><img class="social" src="./assets/email.png" alt="email icon"></a>
-                <a href="https://t.me/jstwrx"><img class="social" src="./assets/telegram.png" alt="telegram icon"></a>
-            </div>
+    <footer id="contact">
+        <!-- <div id="contact" class="contact"> -->
+        <h2>Contact me</h2>
+        <div class="contact__body">
+            <a href="https://github.com/Wrx246"><img class="social" src="./assets/github.png" alt="github icon"></a>
+            <a href="https://www.linkedin.com/in/mkuzmianok/"><img class="social" src="./assets/linkedin.png"
+                    alt="linkedin icon"></a>
+            <a href="mailto:jst.wrx@gmail.com"><img class="social" src="./assets/email.png" alt="email icon"></a>
+            <a href="https://t.me/jstwrx"><img class="social" src="./assets/telegram.png" alt="telegram icon"></a>
         </div>
+        <!-- </div> -->
     </footer>
 </body>
 
