@@ -1,0 +1,143 @@
+.window {
+    min-height: 40%;
+    min-width: 45%;
+    background: #171A1B;
+    opacity: 0.8;
+    border: 1px solid #4A4A4A;
+    border-radius: 15px 15px 0px 0px;
+    position: absolute;
+    left: 20%;
+    top: 161px;
+
+    .window_head {
+        display: flex;
+        align-items: center;
+        gap: 40%;
+        margin: 2% 50% 0% 3%;
+
+    }
+
+    .window_buttons {
+        display: flex;
+        gap: 8px;
+
+        .window_close {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            background: #FF5F56;
+        }
+
+        .window_size {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            background: #FFBD2E;
+        }
+
+        .window_minimize {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            background: #27C93F;
+        }
+    }
+
+    .window_input {
+        height: 14px;
+        min-width: 100%;
+        background: #202226;
+        opacity: 0.9;
+        border-radius: 5px;
+        color: white;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 18px;
+        letter-spacing: -0.015em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article {
+        color: white;
+        margin: 10% 10% 15% 10%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: -0.015em;
+
+        span {
+            color: #44FB70;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (max-width: 1700px) {
+        min-width: 50%;
+        article {
+            font-size: 13px;
+            line-height: 20px;
+        }
+        left: 18%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        min-width: 80%;
+        top: 300px;
+        left: 100px;
+
+        article {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        min-width: 70%;
+        top: 350px;
+
+        article {
+            font-size: 15px;
+            line-height: 23px;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        min-width: 80%;
+        top: 400px;
+        left: 50px;
+
+        article {
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        min-width: 80%;
+        top: 450px;
+
+        article {
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        min-width: 80%;
+        top: 500px;
+
+        article {
+            font-size: 10px;
+            line-height: 15px;
+        }
+    }
+}
