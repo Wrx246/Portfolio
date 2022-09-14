@@ -10,27 +10,41 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        port: 3500
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        port: 3000
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: './src/index.html' }),
+        new HtmlWebpackPlugin({ template: path.join(__dirname, 'src', 'index.html') }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin()
     ],
     module: {
         rules: [
             {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: ["babel-loader"],
+            },
+            {
                 test: /\.s[ac]ss$/,
+                exclude: /node_modules/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
             {
                 test: /\.html$/,
+                exclude: /node_modules/,
                 use: ['html-loader']
             },
             {
                 test: /\.(png|jpg|gif)$/i,
+                exclude: /node_modules/,
                 type: 'asset/resource'
             }
         ],
     },
+    resolve: {
+        extensions: ["*", ".js", ".jsx"],
+      }
 }
