@@ -24,6 +24,56 @@
         }
     }
 
+    @keyframes arrow {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-50px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .main_scroll {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 750px;
+        color: white;
+        cursor: pointer;
+        width: 100px;
+        margin: 0 auto;
+
+        &:hover {
+            color: #44FB70;
+        }
+
+        .scroll_img {
+            display: flex;
+            height: 50px;
+
+            img {
+                align-self: end;
+                width: 15px;
+                height: 30px;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                transform-origin: bottom;
+
+                &:hover {
+                    animation-name: arrow;
+                    animation-timing-function: ease;
+                }
+            }
+        }
+    }
+
     @media screen and (max-width: 1500px) {
         .main_title {
             right: 10%;
@@ -93,6 +143,7 @@
             top: 50px;
             left: 50px;
             max-width: 80%;
+
             h1 {
                 font-size: 35px;
                 line-height: 50px;
