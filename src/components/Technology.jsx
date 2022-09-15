@@ -43,7 +43,7 @@ const Technology = () => {
             <div className='technology_box'>
             {techItems.map((item) => {
                 return (
-                    <div className='box_item'>
+                    <div key={item.name} className='box_item'>
                         <span>{item.name}</span>
                         <img src={item.img} alt={item.name} />
                     </div>
