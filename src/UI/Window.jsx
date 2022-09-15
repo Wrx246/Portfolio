@@ -16,7 +16,7 @@ const Window = () => {
                 <p>
                     Person &#123;<br />
                     <span>Name:</span> Maksim;<br />
-                    <span>lastname:</span> Kuzmianok;<br />
+                    <span>LastName:</span> Kuzmianok;<br />
                     <span>PersonType:</span> Frontend Developer;<br />
                     &#125;
                 </p>
