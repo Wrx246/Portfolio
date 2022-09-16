@@ -16,14 +16,14 @@ const Main = () => {
                         experience at its best.
                     </p>
                 </div>
-                
+
             </div>
             <div className='main_scroll'>
-                    <div className='scroll_img'>
-                        <img src={ArrowDown} alt="arrow down" />
-                    </div>
-                    <span>see more</span>
+                <div className='scroll_img'>
+                    <img src={ArrowDown} alt="arrow down" />
                 </div>
+                <span>see more</span>
+            </div>
         </div>
     )
 }

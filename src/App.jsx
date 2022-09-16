@@ -6,6 +6,7 @@ import Preloader from './UI/Preloader'
 import About from './components/About'
 import Technology from './components/Technology'
 import Footer from './components/Footer'
+import Projects from './components/Projects'
 
 const App = () => {
     const [loader, setLoader] = useState(false)
@@ -17,21 +18,22 @@ const App = () => {
         }, 3000)
     }, [])
     return (
-        <>
-            {
-                loader ?
-                    <Preloader />
-                    :
+        // <>
+        //     {
+        //         loader ?
+        //             <Preloader />
+        //             :
                     <>
                         <Header />
                         <Main />
                         <About />
                         <Technology />
+                        <Projects />
                         <Footer />
                     </>
-            }
+        //     }
 
-        </>
+        // </>
     )
 }
 

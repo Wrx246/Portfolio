@@ -19,16 +19,18 @@ const Footer = () => {
                 <div className='footer_contacts'>
                     <h4>Contacts</h4>
                     <ul>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Telegram</a></li>
-                        <li><a href="#">E-mail</a></li>
+                        <li><a href="https://www.linkedin.com/in/mkuzmianok/" target="_blank">
+                            LinkedIn</a></li>
+                        <li><a href="https://t.me/jstwrx" target="_blank">Telegram</a></li>
+                        <li><a href="jst.wrx@gmail.com" target="_blank">E-mail</a></li>
                     </ul>
                 </div>
                 <div className='footer_links'>
                     <h4>Links</h4>
                     <ul>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">CodeWars</a></li>
+                        <li><a href="https://github.com/Wrx246" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.codewars.com/users/Waryxa" target="_blank">
+                            CodeWars</a></li>
                     </ul>
                 </div>
                 <div className='footer_location'>

@@ -1,0 +1,106 @@
+.projects {
+    width: 100%;
+    height: 100%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 1875px) {
+        margin-top: 200px;
+    }
+
+    @media screen and (max-width: 1250px) {
+        margin-top: 300px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        margin-top: 150px;
+    }
+
+    @media screen and (max-width: 780px) {
+        margin-top: 200px;
+    }
+
+    @media screen and (max-width: 625px) {
+        margin-top: 400px;
+    }
+
+    @media screen and (max-width: 400px) {
+        margin-top: 100px;
+    }
+
+    .projects_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 100%;
+
+        h2 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 55px;
+            line-height: 50px;
+            color: #44FB70;
+        }
+    }
+
+    .project_slider {
+        max-width: 70%;
+        overflow: hidden;
+    }
+
+    .projects_list {
+        cursor: grab;
+        display: flex;
+    }
+
+    @keyframes arrow {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-50px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .back_scroll {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        cursor: pointer;
+        width: 120px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        &:hover {
+            color: #44FB70;
+        }
+
+        .back_img {
+            display: flex;
+            height: 50px;
+
+            img {
+                align-self: end;
+                width: 15px;
+                height: 30px;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                transform-origin: bottom;
+
+                &:hover {
+                    animation-name: arrow;
+                    animation-timing-function: ease;
+                }
+            }
+        }
+    }
+}
