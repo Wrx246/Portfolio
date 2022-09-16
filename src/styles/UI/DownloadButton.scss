@@ -1,0 +1,36 @@
+.download_wrapper {
+
+    input {
+        display: none
+    }
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #44FB70;
+        font-size: 25px;
+        font-weight: 600;
+
+
+        &:hover {
+            color: #00ff3c;
+        }
+
+        &:active {
+            color: #098d28;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        button {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        button {
+            font-size: 15px;
+        }
+    }
+}

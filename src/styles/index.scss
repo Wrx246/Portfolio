@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Space Mono';
+    src: url(../assets/fonts/SpaceMono-Regular.woff2);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: 'Space Mono';
+    background-image: url('../assets/images/Background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
