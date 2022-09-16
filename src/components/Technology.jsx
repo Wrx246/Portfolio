@@ -38,7 +38,7 @@ const Technology = () => {
 
 
     return (
-        <div className='technology'>
+        <div className='technology' id='technology'>
             <h2>MY STACK</h2>
             <div className='technology_box'>
             {techItems.map((item) => {

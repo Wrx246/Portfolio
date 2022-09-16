@@ -18,11 +18,11 @@ const App = () => {
         }, 3000)
     }, [])
     return (
-        // <>
-        //     {
-        //         loader ?
-        //             <Preloader />
-        //             :
+        <>
+            {
+                loader ?
+                    <Preloader />
+                    :
                     <>
                         <Header />
                         <Main />
@@ -31,9 +31,9 @@ const App = () => {
                         <Projects />
                         <Footer />
                     </>
-        //     }
+            }
 
-        // </>
+        </>
     )
 }
 

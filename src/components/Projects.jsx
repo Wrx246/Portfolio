@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import Scroll  from 'react-scroll'
 import '../styles/Projects.scss'
 import ProjectCard from '../UI/ProjectCard'
 import { projectItems } from '../data'
@@ -13,8 +14,14 @@ const Projects = () => {
         setWidth(sliderRef.current.scrollWidth - sliderRef.current.offsetWidth)
     }, [])
 
+    const scrollTop = (e) => {
+        e.preventDefault();
+        const scroll = Scroll.animateScroll;
+        scroll.scrollToTop()
+    }
+
     return (
-        <div className='projects'>
+        <div className='projects' id='projects'>
             <div className='projects_wrapper'>
                 <h2>PROJECTS</h2>
                 <motion.div 
@@ -32,7 +39,7 @@ const Projects = () => {
                         })}
                     </motion.div>
                 </motion.div>
-                <div className='back_scroll'>
+                <div className='back_scroll' onClick={scrollTop}>
                     <div className='back_img'>
                         <img src={ArrowUp} alt="arrow up" />
                     </div>

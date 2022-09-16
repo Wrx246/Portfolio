@@ -5,7 +5,7 @@ import Download from '../assets/images/Vector.png'
 
 const Footer = () => {
     return (
-        <div className='footer'>
+        <div className='footer' id='contacts'>
             <div className='footer_body'>
                 <div className='footer_download'>
                     <h4>Download CV</h4>
