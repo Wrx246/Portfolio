@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className='footer_download'>
                     <h4>Download CV</h4>
                     <DownloadButton>
-                        <a href='https://drive.google.com/uc?export=download&id=1KTUbR3e-cFJPCE1jOkiu4wQhshoComni'>
+                        <a href='https://drive.google.com/file/d/1KTUbR3e-cFJPCE1jOkiu4wQhshoComni/view?usp=sharing' target='_blank'>
                             <button>
                                 <img src={Download} alt='download' />
                                 Download
