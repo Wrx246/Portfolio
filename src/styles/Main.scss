@@ -202,8 +202,8 @@
             }
 
             p {
-                font-size: 25px;
-                line-height: 40px;
+                font-size: 23px;
+                line-height: 35px;
             }
         }
     }
@@ -225,6 +225,32 @@
             h1 {
                 font-size: 30px;
                 line-height: 40px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .main_wrapper {
+            min-width: 80%;
+            min-height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .main_title {
+            top: 13%;
+            left: 10%;
+            max-width: 70%;
+
+            h1 {
+                font-size: 25px;
+                line-height: 35px;
             }
 
             p {

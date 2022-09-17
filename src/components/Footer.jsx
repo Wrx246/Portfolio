@@ -10,10 +10,12 @@ const Footer = () => {
                 <div className='footer_download'>
                     <h4>Download CV</h4>
                     <DownloadButton>
-                        <button>
-                            <img src={Download} alt='download' />
-                            Download
-                        </button>
+                        <a href='https://drive.google.com/uc?export=download&id=1KTUbR3e-cFJPCE1jOkiu4wQhshoComni'>
+                            <button>
+                                <img src={Download} alt='download' />
+                                Download
+                            </button>
+                        </a>
                     </DownloadButton>
                 </div>
                 <div className='footer_contacts'>

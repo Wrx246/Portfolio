@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
+import { Link } from 'react-scroll'
 import '../styles/UI/BurgerButton.scss'
 
 
 const BurgerButton = () => {
+    const settings = {
+        spy: true,
+        smooth: 'true',
+        offset: '50',
+        duration: '500',
+    }
     const [burger, setBurger] = useState(false);
 
     const rootStyle = ['burger__body']
@@ -22,6 +29,13 @@ const BurgerButton = () => {
         setBurger(!burger)
     }
 
+    const linksArray = [
+        { link: 'main', name: 'Home' },
+        { link: 'about', name: 'About' },
+        { link: 'projects', name: 'Projects' },
+        { link: 'contacts', name: 'Contacts' },
+    ]
+
     return (
         <div>
             <div onClick={handleClick}>
@@ -30,10 +44,18 @@ const BurgerButton = () => {
                 <div className={botStyle.join(' ')}></div>
             </div>
             <ul className={rootStyle.join(' ')}>
-                <a className='navbar__item' href='#'>Home</a>
-                <a className='navbar__item' href='#'>About</a>
-                <a className='navbar__item' href='#'>Projects</a>
-                <a className='navbar__item' href='#'>Contacts</a>
+                {linksArray.map((item) => {
+                    return (
+                        <Link
+                            key={item.link}
+                            to={item.link}
+                            {...settings}
+                            className='navbar__item'
+                            onClick={() => setBurger(false)}>
+                            {item.name}
+                        </Link>
+                    )
+                })}
             </ul>
         </div>
     )

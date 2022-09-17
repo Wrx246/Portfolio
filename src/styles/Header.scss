@@ -10,6 +10,8 @@
         display: none;
     }
     @media screen and (max-width: 450px) {
+        position: fixed;
+        z-index: 9999;
 
         .burger {
             position: absolute;
