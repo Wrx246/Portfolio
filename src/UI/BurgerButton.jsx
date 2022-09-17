@@ -6,9 +6,9 @@ import '../styles/UI/BurgerButton.scss'
 const BurgerButton = () => {
     const settings = {
         spy: true,
-        smooth: 'true',
-        offset: '50',
-        duration: '500',
+        smooth: true,
+        offset: 50,
+        duration: 500,
     }
     const [burger, setBurger] = useState(false);
 
@@ -46,14 +46,15 @@ const BurgerButton = () => {
             <ul className={rootStyle.join(' ')}>
                 {linksArray.map((item) => {
                     return (
-                        <Link
-                            key={item.link}
-                            to={item.link}
-                            {...settings}
-                            className='navbar__item'
-                            onClick={() => setBurger(false)}>
-                            {item.name}
-                        </Link>
+                        <li>
+                            <Link
+                                to={item.link}
+                                {...settings}
+                                className='navbar__item'
+                                onClick={() => setBurger(false)}>
+                                {item.name}
+                            </Link>
+                        </li>
                     )
                 })}
             </ul>
