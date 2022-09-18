@@ -1,4 +1,4 @@
-# Rick and Morty
+# Portfolio
 
 
 [Demo](https://kuzmenokportfolio.netlify.app)
