@@ -34,6 +34,30 @@
         }
     }
 
+    @media screen and (max-width: 1366px) {
+        max-width: 275px;
+        min-width: 265px;
+        max-height: 556px;
+        padding: 15px;
+        gap: 15px;
+
+        img {
+            height: 318px;
+        }
+
+        .card_text {
+            height: 130px;
+    
+            a {
+                font-size: 25px;
+            }
+    
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
     @media screen and (max-width: 420px) {
         max-width: 275px;
         min-width: 275px;
