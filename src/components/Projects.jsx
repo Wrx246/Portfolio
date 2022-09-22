@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import Scroll  from 'react-scroll'
+import Scroll from 'react-scroll'
 import '../styles/Projects.scss'
 import ProjectCard from '../UI/ProjectCard'
 import { projectItems } from '../data'
@@ -8,6 +8,7 @@ import ArrowUp from '../assets/images/Arrow up.png'
 
 const Projects = () => {
     const [width, setWidth] = useState(0);
+    const [move, setMove] = useState(false)
     const sliderRef = useRef();
 
     useEffect(() => {
@@ -24,17 +25,21 @@ const Projects = () => {
         <div className='projects' id='projects'>
             <div className='projects_wrapper'>
                 <h2>PROJECTS</h2>
-                <motion.div 
-                whileTap={{cursor: 'grabbing'}}
-                ref={sliderRef} 
-                className='project_slider'>
+                <motion.div
+                    whileTap={{ cursor: 'grabbing' }}
+                    ref={sliderRef}
+                    className='project_slider'>
                     <motion.div
                         drag="x"
+                        animate={{ x: [0, -width, -width, 0]}}
+                        // whileHover={setMove(!move)}
+                        // animate={{x: move ? 0 : 1000}}
+                        transition={{ repeat: Infinity , type: 'tween', duration: 20}}
                         dragConstraints={{ right: 0, left: -width }}
                         className='projects_list'>
-                        {projectItems.map((project) => {
+                        {projectItems.map((project, index) => {
                             return (
-                                <ProjectCard project={project} />
+                                <ProjectCard key={index} project={project} />
                             )
                         })}
                     </motion.div>
