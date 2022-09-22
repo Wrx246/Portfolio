@@ -32,8 +32,6 @@ const Projects = () => {
                     <motion.div
                         drag="x"
                         animate={{ x: [0, -width, -width, 0]}}
-                        // whileHover={setMove(!move)}
-                        // animate={{x: move ? 0 : 1000}}
                         transition={{ repeat: Infinity , type: 'tween', duration: 20}}
                         dragConstraints={{ right: 0, left: -width }}
                         className='projects_list'>

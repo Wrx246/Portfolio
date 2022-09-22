@@ -10,8 +10,9 @@ const DownloadButton = ({children}) => {
     }
 
     return (
-        <div className='download_wrapper' onClick={() => ref.current.click()}>
-            <input onChange={onChangeImage} ref={ref} type="file" accept="image/*" />
+        // <div className='download_wrapper' onClick={() => ref.current.click()}>
+        <div className='download_wrapper'>
+            {/* <input onChange={onChangeImage} ref={ref} type="file" accept="image/*" /> */}
             {children}
         </div>
     )
