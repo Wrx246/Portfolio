@@ -44,9 +44,9 @@ const BurgerButton = () => {
                 <div className={botStyle.join(' ')}></div>
             </div>
             <ul className={rootStyle.join(' ')}>
-                {linksArray.map((item) => {
+                {linksArray.map((item, index) => {
                     return (
-                        <li>
+                        <li key={index}>
                             <Link
                                 to={item.link}
                                 {...settings}

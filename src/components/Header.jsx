@@ -5,10 +5,10 @@ import BurgerButton from '../UI/BurgerButton'
 
 const Header = () => {
     const settings = {
-        spy: 'true',
-        smooth: 'true',
-        offset: '50',
-        duration: '500',
+        spy: true,
+        smooth: true,
+        offset: 50,
+        duration: 500,
     }
     return (
         <div className='header_wrapper'>

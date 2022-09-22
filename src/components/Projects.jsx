@@ -32,9 +32,9 @@ const Projects = () => {
                         drag="x"
                         dragConstraints={{ right: 0, left: -width }}
                         className='projects_list'>
-                        {projectItems.map((project) => {
+                        {projectItems.map((project, index) => {
                             return (
-                                <ProjectCard project={project} />
+                                <ProjectCard key={index} project={project} />
                             )
                         })}
                     </motion.div>
