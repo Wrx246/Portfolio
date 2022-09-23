@@ -37,14 +37,14 @@ const Footer = () => {
                         <li><a href="https://www.linkedin.com/in/mkuzmianok/" target="_blank">
                             LinkedIn</a></li>
                         <li><a href="https://t.me/jstwrx" target="_blank">Telegram</a></li>
-                        <li><a href="jst.wrx@gmail.com" target="_blank">E-mail</a></li>
+                        <li><a href="mailto:jst.wrx@gmail.com" target="_blank">E-mail</a></li>
                     </ul>
                 </div>
                 <div className='footer_links'>
                     <h4>Links</h4>
                     <ul>
                         <li><a href="https://github.com/Wrx246" target="_blank">GitHub</a></li>
-                        <li><a href="https://www.codewars.com/users/Waryxa" target="_blank">
+                        <li><a href="https://www.codewars.com/users/rsschool_643bc3658238798b" target="_blank">
                             CodeWars</a></li>
                     </ul>
                 </div>
