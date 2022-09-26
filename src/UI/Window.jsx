@@ -1,9 +1,11 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import '../styles/UI/Window.scss'
+import { forwardRef } from 'react'
 
-const Window = () => {
+export const Window = forwardRef((props, ref) => {
     return (
-        <div className='window'>
+        <div ref={ref} className='window'>
             <div className='window_head'>
                 <div className='window_buttons'>
                     <div className='window_close' />
@@ -29,6 +31,6 @@ const Window = () => {
             </article>
         </div>
     )
-}
+})
 
-export default Window
+export const MWindow = motion(Window)
