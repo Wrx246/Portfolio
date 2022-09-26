@@ -54,13 +54,13 @@ const Projects = () => {
                     ref={sliderRef}
                     className='project_slider'>
                     <motion.div
-                        drag="x"
+                        // drag="x"
                         // style={{
                         //     transform: `translateX(${offset}px)`,
                         //   }}
-                        animate={{ x: [0, -width, -width, 0] }}
-                        transition={{ repeat: Infinity, type: 'tween', duration: 20 }}
-                        dragConstraints={{ right: 0, left: -width }}
+                        // animate={{ x: [0, -width, -width, 0] }}
+                        // transition={{ repeat: Infinity, type: 'tween', duration: 20 }}
+                        // dragConstraints={{ right: 0, left: -width }}
                         className='projects_list'>
                         {projectItems.map((project, index) => {
                             return (
