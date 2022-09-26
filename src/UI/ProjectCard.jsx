@@ -5,7 +5,7 @@ import '../styles/UI/ProjectCard.scss'
 const ProjectCard = ({ project }) => {
     return (
         <div className='card_wrapper'>
-            <a href='#'>
+            <a href={project.link}>
                 <img src={project.gif} alt='project photo' />
             </a>
             <div className='card_text'>
