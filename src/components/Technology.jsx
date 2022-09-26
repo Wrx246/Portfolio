@@ -48,7 +48,7 @@ const Technology = () => {
     return (
         <div className='technology' id='technology'>
             <h2>MY STACK</h2>
-            <motion.div initial='hidden' whileInView='visible' viewport={{ amount: 0.2 }} className='technology_box'>
+            <motion.div initial='hidden' whileInView='visible' viewport={{ amount: 0.2, once: true }} className='technology_box'>
                 {techItems.map((item, index) => {
                     return (
                         <motion.div custom={index - 0.5} variants={itemAnimation} key={item.name} className='box_item'>
