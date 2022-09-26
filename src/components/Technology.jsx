@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import '../styles/Technology.scss'
 import Html from '../assets/images/technology/icons8-html-5-96.png'
 import Css from '../assets/images/technology/icons8-css3-96.png'
@@ -19,37 +20,44 @@ import NodeJS from '../assets/images/technology/nodejs.png'
 const Technology = () => {
 
     const techItems = [
-        {name: "JS", img: JS},
-        {name: "TS", img: TS},
-        {name: "React", img: REACT},
-        {name: "Redux", img: Redux},
-        {name: "HTML", img: Html},
-        {name: "CSS", img: Css},
-        {name: "Sass", img: Sass},
-        {name: "Webpack", img: Webpack},
-        {name: "NodeJS", img: NodeJS},
-        {name: "MongoDB", img: Mongo},
-        {name: "Git", img: Git},
-        {name: "GitHub", img: GitHub},
-        {name: "VSCode", img: VSCode},
-        {name: "Figma", img: Figma},
-        {name: "Postman", img: Postman},
+        { name: "JS", img: JS },
+        { name: "TS", img: TS },
+        { name: "React", img: REACT },
+        { name: "Redux", img: Redux },
+        { name: "HTML", img: Html },
+        { name: "CSS", img: Css },
+        { name: "Sass", img: Sass },
+        { name: "Webpack", img: Webpack },
+        { name: "NodeJS", img: NodeJS },
+        { name: "MongoDB", img: Mongo },
+        { name: "Git", img: Git },
+        { name: "GitHub", img: GitHub },
+        { name: "VSCode", img: VSCode },
+        { name: "Figma", img: Figma },
+        { name: "Postman", img: Postman },
     ]
 
+    const itemAnimation = {
+        hidden: { opacity: 0 },
+        visible: custom => ({
+            opacity: 1,
+            transition: { delay: custom * .2 }
+        }),
+    }
 
     return (
         <div className='technology' id='technology'>
             <h2>MY STACK</h2>
-            <div className='technology_box'>
-            {techItems.map((item) => {
-                return (
-                    <div key={item.name} className='box_item'>
-                        <span>{item.name}</span>
-                        <img src={item.img} alt={item.name} />
-                    </div>
-                )
-            })}
-            </div>
+            <motion.div initial='hidden' whileInView='visible' viewport={{ amount: 0.2, once: true }} className='technology_box'>
+                {techItems.map((item, index) => {
+                    return (
+                        <motion.div custom={index - 0.5} variants={itemAnimation} key={item.name} className='box_item'>
+                            <span>{item.name}</span>
+                            <img src={item.img} alt={item.name} />
+                        </motion.div>
+                    )
+                })}
+            </motion.div>
         </div>
     )
 }
