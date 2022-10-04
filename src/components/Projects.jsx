@@ -10,12 +10,8 @@ import ArrowLeft from '../assets/images/arrow-left.png'
 
 const Projects = () => {
     const [width, setWidth] = useState(0);
-    const [move, setMove] = useState(false)
-    // const [pages, setPages] = useState([])
-    // const [offset, setOffset] = useState(0)
+    const [arrowDisable, setArrowDisable] = useState(true);
     const sliderRef = useRef();
-
-    const PAGE_WIDTH = 371
 
     useEffect(() => {
         setWidth(sliderRef.current.scrollWidth - sliderRef.current.offsetWidth)
@@ -27,28 +23,33 @@ const Projects = () => {
         scroll.scrollToTop()
     }
 
-    // const onLeftClick = (e) => {
-    //     e.preventDefault();
-    //     setOffset((currentOffset) => {
-    //         const newOffset = currentOffset + PAGE_WIDTH
-    //         return Math.min(newOffset, 0)
-    //       })
-    // }
-
-    // const onRightClick = (e) => {
-    //     e.preventDefault();
-    //     setOffset((currentOffset) => {
-    //         const newOffset = currentOffset - PAGE_WIDTH
-    //         const maxOffset = -(PAGE_WIDTH * (projectItems.length - 1))
-    //         return Math.max(newOffset, maxOffset)
-    //       })
-    // }
+    const handleHorizontalScroll = (element, speed, distance, step) => {
+        let scrollAmount = 0;
+        const slideTimer = setInterval(() => {
+            element.scrollLeft += step;
+            scrollAmount += Math.abs(step);
+            if (scrollAmount >= distance) {
+                clearInterval(slideTimer);
+            }
+            if (element.scrollLeft === 0) {
+                setArrowDisable(true);
+            } else {
+                setArrowDisable(false);
+            }
+        }, speed);
+    };
 
     return (
         <div className='projects' id='projects'>
             <div className='projects_wrapper'>
                 <h2>PROJECTS</h2>
-                {/* <button onClick={onLeftClick} className='button_left' type='button'><img src={ArrowLeft} alt='left arrow' /></button> */}
+                <button onClick={() => {
+                    handleHorizontalScroll(sliderRef.current, 25, 260, -10)
+                }}
+                    disabled={arrowDisable === true}
+                    className='button_left' type='button'>
+                    <img src={ArrowLeft} alt='left arrow' />
+                </button>
                 <motion.div
                     // whileTap={{ cursor: 'grabbing' }}
                     ref={sliderRef}
@@ -69,7 +70,12 @@ const Projects = () => {
                         })}
                     </motion.div>
                 </motion.div>
-                {/* <button onClick={onRightClick} className='button_right' type='button'><img src={ArrowRight} alt='right arrow' /></button> */}
+                <button onClick={() => {
+                    handleHorizontalScroll(sliderRef.current, 25, 260, 10)
+                }}
+                    className='button_right' type='button'>
+                    <img src={ArrowRight} alt='right arrow' />
+                </button>
                 <div className='back_scroll' onClick={scrollTop}>
                     <div className='back_img'>
                         <img src={ArrowUp} alt="arrow up" />
