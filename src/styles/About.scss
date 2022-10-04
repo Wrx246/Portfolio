@@ -11,12 +11,19 @@
         max-height: 691px;
     }
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1366px) {
         img {
             max-width: 342px;
             max-height: 591px;
         }
     }
+
+    // @media screen and (max-width: 1100px) {
+    //     img {
+    //         max-width: 342px;
+    //         max-height: 591px;
+    //     }
+    // }
 
     @media screen and (max-width: 750px) {
         img {
