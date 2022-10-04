@@ -41,6 +41,10 @@
         background: #44FB70;
     }
 
+    .button_left:disabled {
+        display: none;
+    }
+
     .button_right {
         position: absolute;
         right: 17%;
@@ -54,6 +58,10 @@
 
     .button_right:hover {
         background: #44FB70;
+    }
+
+    .button_right:disabled {
+        display: none;
     }
 
     @media screen and (max-width: 912px) {
