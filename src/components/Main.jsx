@@ -33,11 +33,18 @@ const Main = () => {
         }),
     }
 
+    const options = {
+        duration: 1500,
+        smooth: true,
+    }
+
     const scrollDown = (e) => {
         e.preventDefault();
         const scroll = Scroll.animateScroll;
-        scroll.scrollToBottom()
+        // scroll.scrollToBottom()
+        scroll.scrollTo(window.innerHeight, options)
     }
+
     return (
         <div initial='hidden' whileInView='visible' viewport={{ amount: .5, once: true }} className='main' id='main'>
             <motion.div initial='hidden' whileInView='visible' viewport={{ amount: .5, once: true }} className='main_wrapper'>
