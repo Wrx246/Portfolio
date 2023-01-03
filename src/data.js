@@ -12,21 +12,21 @@ export const projectItems = [
         gif: Movies,
         link: 'https://github.com/Wrx246/Films',
         text: 'Clone Imdb and Kinopoisk. Authentication control, trailers, score.',
-        tech: 'React|Redux|Axios|Formik|SCC'
+        tech: 'React|Redux|Axios|Formik|CSS'
     },
     {
         name: 'Animals',
         gif: Animals,
         link: 'https://github.com/Wrx246/Animals',
         text: 'Landing page for animals nursery.',
-        tech: 'HTML|SCC'
+        tech: 'HTML|CSS'
     },
     {
         name: 'Todo',
         gif: Todo,
         link: 'https://github.com/Wrx246/Todo',
         text: 'Todo list for daily tasks.',
-        tech: 'React|SCC'
+        tech: 'React|CSS'
     },
     {
         name: 'Chat',
