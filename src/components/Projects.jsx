@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import Scroll from 'react-scroll'
 import '../styles/Projects.scss'
 import ProjectCard from '../UI/ProjectCard'
-import { projectItems } from '../data'
+import { projectItems } from '../assets/data/data'
 import ArrowUp from '../assets/images/Arrow up.png'
 import ArrowRight from '../assets/images/arrow-right.png'
 import ArrowLeft from '../assets/images/arrow-left.png'
@@ -51,17 +51,9 @@ const Projects = () => {
                     <img src={ArrowLeft} alt='left arrow' />
                 </button>
                 <motion.div
-                    // whileTap={{ cursor: 'grabbing' }}
                     ref={sliderRef}
                     className='project_slider'>
                     <motion.div
-                        // drag="x"
-                        // style={{
-                        //     transform: `translateX(${offset}px)`,
-                        //   }}
-                        // animate={{ x: [0, -width, -width, 0] }}
-                        // transition={{ repeat: Infinity, type: 'tween', duration: 20 }}
-                        // dragConstraints={{ right: 0, left: -width }}
                         className='projects_list'>
                         {projectItems.map((project, index) => {
                             return (
